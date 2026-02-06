@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+main {
+    padding: 1rem 1rem 2.5rem;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    position: relative;
+  }
+  
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: hsl(36, 100%, 99%);
+    padding: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 20;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+  
+  .close-btn {
+    background: none;
+    border: none;
+    margin-left: auto;
+    display: block;
+  }
+  
+  .menu {
+    list-style: none;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .menu a {
+    color: hsl(240, 100%, 5%);
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .menu a:hover {
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+  }
+  
+  .nav.menu-open .overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .nav.menu-open .mobile-menu {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+  
+  .nav.menu-open .menu-btn {
+    display: none;
+  }
+  
+ 
+.top-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top-box > .web3-mobile {
+    width: 100%;
+    height: auto;
+}
+
+.top-box > .web3-desktop {
+    display: none;
+}
+
+.top-box > h2 {
+    font-size: 3rem;
+    display: block;
+    text-align: left;
+    line-height: 2.4rem;
+    padding: 0.6rem;
+}
+
+.top-box p {
+    padding: 1rem 0.2rem;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+.top-box > button {
+    background-color: hsl(5, 85%, 63%);
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform:uppercase;
+    padding: 0.8rem;
+    width: 60%;
+}
+
+.mid-box {
+    background-color: hsl(240, 100%, 5%);
+    margin: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    
+}
+
+.mid-box > h3 {
+    color: hsl(35, 77%, 62%);
+    padding: 0.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.mid-box details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mid-box > details summary {
+    color: hsl(36, 100%, 99%);
+    list-style-type: none;
+}
+
+.mid-box > details::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    opacity: 0.4;
+    margin: 1rem 0;
+}
+.mid-box > details  p {
+    color: hsl(233, 8%, 79%);
+    font-size: 15px;
+}
+
+.bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bottom-box .retro-pc {
+    display: flex;
+    gap: 1rem;
+}
+
+.bottom-box .retro-pc .image-wrapper {
+    width: 50%;
+    height: auto;
+}
+
+.retro-pc .image-wrapper > img {
+    width: 100%;
+}
+
+.bottom-box .laptops {
+    display: flex;
+    gap: 1rem;
+}
+
+.bottom-box .laptops .image-wrapper {
+    width: 40%;
+    height: auto;
+}
+
+.laptops .image-wrapper > img {
+    width: 100%;
+}
+
+.bottom-box .gaming-console {
+    display: flex;
+    gap: 1rem;
+}
+
+.bottom-box .gaming-console .image-wrapper {
+    width: 50%;
+    height: auto;
+}
+
+.gaming-console .image-wrapper > img {
+    width: 100%;
+}
+
+.retro-pc-info,
+.laptops-info,
+.gaming-console-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gaming-console-info > h3,
+.retro-pc-info > h3,
+.laptops-info > h3 {
+    color: hsl(5, 85%, 63%)
+    ;
+    font-size: 1.5rem;
+}
+
+.gaming-console-info > h4,
+.retro-pc-info > h4,
+.laptops-info > h4  {
+    font-weight: 800;
+}
+
+.gaming-console-info > p,
+.retro-pc-info > p,
+.laptops-info > p  {
+    color: hsl(236, 13%, 42%);
+    margin-top: 0.8rem;
+}
+
+
+@media (min-width: 1020px) {
+    body {
+        padding: 3rem 6rem;
+    }
+
+    .overlay, 
+    .menu-btn, 
+    .close-btn {
+        display: none;
+    }
+
+    nav > h1 {
+        font-size: 5rem;
+    }
+
+    .mobile-menu {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
+     .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0;
+        font-size: 8px;
+    }
+
+    .menu a {
+        color: hsl(233, 8%, 79%);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
+
+    .top-box > .web3-mobile {
+        display: none;
+    }
+
+
+.top-box > .web3-desktop {
+    display: block;
+}
+
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 2rem;
+  }
+    .top-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    
+      .top-box > .web3-desktop {
+        grid-column: 1 / -1;
+      }
+    
+      .top-box > h2 {
+        grid-column: 1 / 2;
+      }
+    
+      .top-box > p {
+        grid-column: 2 / 3;
+      }
+    
+      .top-box > button {
+        grid-column: 2 / 3;
+      }
+    }
+
+.mid-box {
+    grid-area: sidebar;
+    margin-top: 0;
+}
+
+.bottom-box {
+    grid-area: bottom;
+    flex-direction: row;
+    gap: 2rem;
+}
