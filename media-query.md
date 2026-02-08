@@ -1,59 +1,11 @@
 @media (min-width: 1020px) {
-    body {
-        padding: 3rem 6rem;
-    }
-
-    .overlay, 
-    .menu-btn, 
-    .close-btn {
-        display: none;
-    }
-
-    nav > h1 {
-        font-size: 5rem;
-    }
-
-    .mobile-menu {
-        position: static;
-        transform: none;
-        width: auto;
-        height: auto;
-        padding: 0;
-        background: transparent;
-        -webkit-transform: none;
-        -moz-transform: none;
-        -ms-transform: none;
-        -o-transform: none;
-}
-     .menu {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        margin: 0;
-        font-size: 8px;
-    }
-
-    .menu a {
-        color: hsl(233, 8%, 79%);
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-    }
+   
 
 
 
 
 
-    .top-box > .web3-mobile {
-        display: none;
-    }
-
-
-.top-box > .web3-desktop {
-    display: block;
-}
+    
 
     main {
       display: grid;
