@@ -5,7 +5,15 @@
 
 
 
+    .mid-box > details > .last-detail::after {
+        content: "";
+        display: none;
+        border-bottom: none;
+        opacity: 0;
+        margin: 0.1rem 0;
+    }
     
+
 
     main {
       display: grid;
